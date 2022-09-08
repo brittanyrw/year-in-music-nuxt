@@ -1,4 +1,6 @@
 <script setup>
+import * as marked from "marked";
+
 const route = useRoute();
 const albumStore = useAlbumStore();
 
@@ -16,6 +18,10 @@ const { data: album } = await useAsyncData(
 
 useAsyncData("moreAlbums", async () => albumStore.fetchAdditionalAlbums());
 
+const thoughts = computed(()=>
+  album.value ? marked.parse(album.value?.fields?.thoughts): null
+);
+
 </script>
 <template>
   <div class="page">
@@ -23,7 +29,7 @@ useAsyncData("moreAlbums", async () => albumStore.fetchAdditionalAlbums());
     <section class="page-content" v-if="album">
       <article>
       <AlbumPageHeader :album="album" />
-      <!-- Add album description here -->
+      <div class="album-thoughts" v-if="album.fields.thoughts" v-html="thoughts" />
       </article>
       <hr />
       <div
