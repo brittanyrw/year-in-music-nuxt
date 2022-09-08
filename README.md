@@ -10,7 +10,7 @@ Learn how to use Contentful by keeping track of your favorite albums per month. 
 
 ## Example Demo
 
-### [View live demo here](https://vocal-custard-fbf61f.netlify.app/)
+### [View live demo here](https://year-in-music.netlify.app/)
 
 ## Getting Started
 
