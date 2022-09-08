@@ -3,9 +3,7 @@
 <template>
   <section class="page-header">
     <h2>
-      <NuxtLink to="/">
-        Back to List
-      </NuxtLink>
+      <NuxtLink to="/"> Back to List </NuxtLink>
     </h2>
   </section>
 </template>

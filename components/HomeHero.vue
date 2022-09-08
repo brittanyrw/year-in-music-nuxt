@@ -2,8 +2,7 @@
 
 <template>
   <section class="hero">
-    <NuxtLink to="/"
-      >
+    <NuxtLink to="/">
       <h1 class="title">Year in music.</h1>
     </NuxtLink>
     <p class="intro">

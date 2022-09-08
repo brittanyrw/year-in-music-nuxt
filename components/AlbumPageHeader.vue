@@ -3,7 +3,7 @@ defineProps({
   album: {
     type: Object,
     required: true,
-  }
+  },
 });
 
 const monthNames = [
@@ -33,7 +33,9 @@ const monthNames = [
       <h2>
         {{ monthNames[new Date(album.fields.favoriteMonth).getUTCMonth()] }}
       </h2>
-      <h1 class="album-page-title">{{ album.fields.name }} ({{ album.fields.releaseYear }})</h1>
+      <h1 class="album-page-title">
+        {{ album.fields.name }} ({{ album.fields.releaseYear }})
+      </h1>
       <p class="album-page-subtitle">{{ album.fields.artistName }}</p>
       <ul class="music-labels">
         <li
@@ -44,8 +46,12 @@ const monthNames = [
         >
           {{ mood }}
         </li>
-        <li class="language" v-if="album.fields.language.length > 0" v-for="language in album.fields.language"
-          key="{{language}}">
+        <li
+          class="language"
+          v-if="album.fields.language.length > 0"
+          v-for="language in album.fields.language"
+          key="{{language}}"
+        >
           {{ language }}
         </li>
       </ul>
