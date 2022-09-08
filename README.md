@@ -4,6 +4,10 @@ Learn how to use Contentful by keeping track of your favorite albums per month. 
 
 ![Screenshot of Year In Music example project](./docs/project-example-screenshot.png)
 
+## Setup Links
+
+### [See how to setup here](https://github.com/brittanyrw/year-in-music-nuxt/blob/main/docs/setup.md)
+
 ## Example Demo
 
 ### [View live demo here](https://vocal-custard-fbf61f.netlify.app/)
