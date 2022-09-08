@@ -1,0 +1,256 @@
+/* GENERAL STYLES */
+
+:root {
+  /* Change these colors to update the color theme of your project */
+  --primary-color: #8D6DDE;
+  --secondary-color: #d16dde;
+  --accent-color: #6DDE9A;
+  --body-background-color: #1D1D1D;
+  --primary-text-color: #080808;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 0 30px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  background-color: var(--body-background-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+p, ul, h4, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 10px 0;
+  color: #1D1D1D;
+}
+
+img {
+  width: 100%;
+}
+
+.container, .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ALBUMS */
+
+.album-container {
+  background-color: var(--primary-color);
+  text-align: center;
+  display: grid;
+}
+
+.album {
+  padding: 20px;
+  color: var(--primary-text-color);
+  text-align: left;
+}
+
+.album a {
+  color: var(--primary-text-color);
+  font-size: 25px;
+}
+
+.album-month {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.album-title {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.album .album-image {
+  height: auto;
+  width: 100%;
+}
+
+.album-title {
+  cursor: pointer;
+}
+
+/* HOMEPAGE */
+
+.hero {
+  padding: 30px;
+  background: var(--primary-text-color)
+}
+
+.hero h1 {
+  color: var(--primary-color);
+}
+
+.intro {
+  max-width: 800px;
+  color: var(--primary-color);
+}
+
+/* ALBUM PAGE */
+
+.music-labels {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  margin-top: 10px;
+}
+
+.music-labels li {
+  padding: 10px;
+  border: 2px solid var(--body-background-color);
+  margin: 10px 0;
+    border: 3px solid var(--primary-text-color);
+}
+
+.mood {
+  background-color: #FF433E;
+}
+
+.language {
+  background-color: #6D7FDE;
+}
+
+/* PAGE */
+
+.page {
+  background-color: var(--body-background-color);
+}
+
+.page article {
+  background: white;
+}
+
+.page-header {
+  background-color: var(--primary-text-color);
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--primary-color);
+}
+
+.page-header a {
+  color: var(--primary-color);
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+hr {
+  border: 10px solid var(--accent-color);
+  margin: 20px 0;
+}
+
+.album-thoughts {
+  padding: 30px;
+}
+
+.album-thoughts ul {
+  padding-left: 40px;
+  margin: 20px 0;
+}
+
+.album-page-title {
+  font-size: 40px;
+}
+
+.album-page-subtitle {
+  font-size: 40px;
+}
+
+.album-page-header {
+  border-bottom: 5px solid var(--primary-text-color);
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-page-info {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.album-page-info h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-link {
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link a {
+  background-color: var(--primary-text-color);
+  padding: 10px 25px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 426px) {
+  h1 {
+    font-size: 100px;
+  }
+ 
+  .album-page-title {
+    font-size: 60px;
+  }
+  .album-page-header {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .album-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .album-page-header {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: unset;
+  }
+
+  .album-page-header .album-page-image {
+    height: 400px;
+    max-width: 400px;
+    border-right: 5px solid var(--primary-text-color);
+  } 
+}
