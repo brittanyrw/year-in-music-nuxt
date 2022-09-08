@@ -46,13 +46,14 @@ const monthNames = [
         >
           {{ mood }}
         </li>
-        <li
-          class="language"
-          v-if="album.fields.language.length > 0"
-          v-for="language in album.fields.language"
-          key="{{language}}"
-        >
-          {{ language }}
+      </ul>
+      <h3>Artist Info</h3>
+      <ul>
+        <li v-for="stat in album.fields.artist">
+          <p>{{ stat.fields.hometown }}</p>
+          <p>
+            <a href="`{{stat.fields.website}}`">{{ stat.fields.website }}</a>
+          </p>
         </li>
       </ul>
     </div>
